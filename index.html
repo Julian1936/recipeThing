@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Servings Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="images/itech-logo.png" alt="iTech Media Logo" title="iTech Media Logo" />
+        </div>
+    </header>
+    
+    <div id="breadcrumbs">
+        <div class="container">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Primary</a></li>
+                <li class="current-item">Tertiary</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <main>
+            <div class="recipe-calculator">
+                <div class="inner">
+                    <h1 id="recipe-name"></h1>
+                    <div class="serving-input-cook-time-wrapper">
+                        <input type="number" id="servings" name="servings" placeholder="Enter Number of Servings">
+                        <p>Cooking Time: </p>
+                    </div>
+                    <button id="calculate-servings">Calculate</button>
+                </div>                
+            </div>
+            <div class="recipe-method">
+                <div class="inner">
+                    <h2>Method</h2>
+                    <ol id="method-list"></ol>
+                </div>
+            </div>
+        </main>
+
+        <aside>
+            <div class="ingredients">
+                <div class="inner">
+                    <h2>Ingredients</h2>
+                    <ul id="ingredient-list"></ul>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

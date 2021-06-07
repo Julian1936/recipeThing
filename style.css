@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+html, body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    background-color: #E5E5E5;
+} 
+
+h1,h2 {
+    font-weight: 600;
+    font-size: 36px;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.inner {
+    padding: 30px 95px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+/* Header */
+
+header {
+    background-color: #4B2CFF;
+    padding: 20px 0;
+}
+
+header img {
+    max-width: 160px;
+    display: block;
+}
+
+/* END Header */
+
+/* Breadcrumbs */
+
+#breadcrumbs {
+    color: #000;
+    font-weight: 500;
+    padding: 20px 0;
+}
+
+#breadcrumbs a {
+    opacity: 0.5;
+    color: #000;
+    text-decoration: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#breadcrumbs a:hover {
+    opacity: 1;
+}
+
+#breadcrumbs ul {
+    display: flex;
+    align-items: center;
+}
+
+#breadcrumbs ul li {
+    margin-right: 10px;
+}
+
+#breadcrumbs ul li:after {
+    content: "/";
+    margin-left: 10px;
+}
+
+#breadcrumbs ul li:last-child:after {
+    content: none;
+}
+
+/* END Breadcrumbs */
+
+/* Main */
+
+.main-content {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.main-content main {
+    flex: 3;
+    max-width: 730px;
+    margin-right: 30px;
+}
+
+.main-content aside {
+    flex: 1;
+    max-width: 350px;
+    background-color: #4B2CFF;
+    border-radius: 10px;
+}
+
+.recipe-calculator {
+    width: 100%;
+    background-color: #4B2CFF;
+    border-radius: 10px;
+}
+
+h1#recipe-name {
+    color: #fff;
+    width: 100%;
+}
+
+.serving-input-cook-time-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+input#servings {
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 30px;
+    padding: 9px 10px;
+    margin-right: 30px;
+    border: none;
+    width: 100%;
+    max-width: 235px;
+}
+
+.serving-input-cook-time-wrapper p {
+    margin: 0;
+    color:#fff;
+}
+
+button#calculate-servings {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 30px;
+}
+
+/* Method Styles */
+
+ol#method-list {
+    padding: 0;
+}
+
+ol#method-list li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+/* Ingredient Styles */
+
+.ingredients {
+    background-color: #4B2CFF;
+    border-radius: 10px;
+    color: #fff;
+}
+
+span.quantity-wrap {
+    font-weight: 400;
+}
+
+span.ingredient-name {
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+/* END Main */
+
+/* Media Queries */
+
+@media (max-width: 1110px) {
+    .container {
+        padding: 0 10px;
+    }
+    .main-content {
+        width: 95%;
+    }
+} /* END: max-width: 769px */
+
+@media (max-width: 769px) {
+    h1, h2 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .inner {
+        padding: 15px;
+    }
+    .main-content {
+        flex-direction: column;
+    }
+    .main-content main {
+        margin: 0;
+    }
+    .recipe-calculator {
+        margin-bottom: 30px;
+    }
+    .serving-input-cook-time-wrapper {
+        flex-direction: column;
+    }
+    input#servings {
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 94%;
+    }
+    button#calculate-servings {
+        width: 100%;
+    }
+    ul#ingredient-list {
+        height: 200px;
+        overflow: scroll;
+    }
+} /* END: max-width: 769px */
